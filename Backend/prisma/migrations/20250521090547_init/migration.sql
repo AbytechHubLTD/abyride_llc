@@ -1,0 +1,17 @@
+-- CreateTable
+CREATE TABLE `Reservation` (
+    `id` INTEGER NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(191) NOT NULL,
+    `email` VARCHAR(191) NOT NULL,
+    `phone` VARCHAR(191) NOT NULL,
+    `pickup` VARCHAR(191) NOT NULL,
+    `dropoff` VARCHAR(191) NOT NULL,
+    `people` INTEGER NOT NULL,
+    `time` VARCHAR(191) NOT NULL,
+    `distance` DOUBLE NOT NULL,
+    `traffic` VARCHAR(191) NOT NULL,
+    `amount` DOUBLE NOT NULL,
+    `createdAt` DATETIME(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
+
+    PRIMARY KEY (`id`)
+) DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
