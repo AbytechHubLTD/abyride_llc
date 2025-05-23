@@ -3,7 +3,7 @@ import { AddressProcessorService } from '../../Global/RouteSense/address-process
 import { PricingService } from '../../Global/Pricing/pricing.service';
 import Stripe from 'stripe';
 import { PrismaService } from '../../Prisma/prisma.service';  // adjust path accordingly
-import { EmailService } from 'src/Global/Messages/email.service';
+import { EmailService } from 'src/Global/Messages/email/email.service';
 
 @Injectable()
 export class ReservationService {
@@ -74,18 +74,8 @@ const { pickup, dropoff, fullName, email, phoneNumber } = data;
   },
 });
 
-await this.emailService.sendDepartmentEmail(
-  'support',
-  'New Ride Reservation',
-  {
-    fullName,
-    pickup,
-    dropoff,
-    phoneNumber,
-    paymentUrl: session.url,
-  },
-  'reservation-confirmation',
-);
+
+
 
 
     return {

@@ -5,7 +5,7 @@ import { AddressProcessorModule } from '../../Global/RouteSense/address-processo
 import { ReservationController } from './reservation.controller';
 import { PricingModule } from 'src/Global/Pricing/pricing.module';
 import { PrismaModule } from 'src/Prisma/prisma.module';
-import { EmailModule } from 'src/Global/Messages/email.module';
+import { EmailModule } from 'src/Global/Messages/email/email.module';
 
 @Module({
   imports: [

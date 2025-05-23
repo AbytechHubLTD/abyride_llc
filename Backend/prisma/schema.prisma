@@ -29,4 +29,11 @@ model Reservation {
   createdAt    DateTime @default(now())
 }
 
+model Client {
+  id     Int     @id @default(autoincrement())
+  Client_email  String? @unique
+  Client_phoneNumber  String? @unique
+  // You can add more fields: name, createdAt, updatedAt, etc.
+}
+
 
